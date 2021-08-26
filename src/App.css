@@ -1,0 +1,419 @@
+@font-face {
+  font-family: 'Topaz';
+  src: url('./fonts/Topaz_a1200_v1.0.ttf');
+}
+
+@font-face {
+  font-family: 'MicroKnight';
+  src: url('./fonts/MicroKnight_v1.0.ttf');
+}
+
+:root {
+  --main-color: #002186;
+  --secondary-color: #00f1d8;
+  --rust-color: #db4300;
+  --content-height: 80vh;
+}
+
+.App {
+  font-family: 'Topaz';
+  display: flex;
+  flex-direction: column;
+}
+
+.App, :hover {
+  cursor: url('cursor.png'), auto;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #111;
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  color: white;
+  background-color: #d3d3d3;
+  display: grid;
+  grid-template-columns: 14rem repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3px;
+  border: 3px solid #d3d3d3 ;
+  margin-bottom: 1.3rem;
+}
+
+#header-title {
+  font-family: 'MicroKnight';
+  grid-area: 1 / 1 / 3 / 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+header div {
+  display: flex;
+  background-color: #111;
+  justify-content: center;
+}
+
+header a, header p {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  margin: 0.5rem 0.2rem 0.4rem 0.2rem;
+  padding: 0rem 0rem 0.2rem 0rem;
+  background: #db4300;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header a:hover, header p:hover, header p.active:hover, .modernize header a:hover, .modernize header p:hover, .modernize header p.active:hover {
+  background-color: white;
+  color: var(--rust-color);
+}
+
+header p.active, .modernize header p.active {
+  background-color: #ddd;
+  color: var(--rust-color);
+}
+
+header svg {
+  margin: auto;
+  width: 7rem;
+  height: 4rem;
+}
+
+#message {
+  grid-area: 3/1/4/7;
+  display: flex;
+  justify-content: center;
+}
+
+#message p {
+  color: #fbe700;
+}
+
+/******************************************
+                  EDITOR
+*******************************************/
+#editor-section {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+#editable {
+  height: 100%;
+}
+
+#intro {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  min-width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  justify-self: center;
+  text-align: center;
+}
+
+#intro h2, #intro p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0.2rem;
+}
+
+#intro a {
+  color: var(--main-color);
+}
+
+#presentation {
+  text-align: center;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-family: 'Topaz';
+  border: none;
+  outline: none;
+}
+
+
+/******************************************
+                  PREVIEW
+*******************************************/
+
+#preview-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: start;
+}
+
+#preview {
+  overflow-y: auto;
+  padding: 0rem 1rem;
+}
+
+/******************************************
+                  DISPLAYS
+*******************************************/
+
+.no-show {
+  display: none !important;
+}
+
+.normal-height {
+  height: var(--content-height);
+}
+
+.split-height {
+  height: 40vh;
+}
+
+.split-screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+}
+
+.normal-wrapper {
+  display: block;
+}
+
+.split-vertical-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 80vh;
+}
+
+
+.anchor {
+  position: relative;
+  top: -18vh;
+  visibility: hidden;
+}
+
+.identifier {
+  width: 5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+  padding: 0.5rem;
+  text-align: center;
+
+  align-self: flex-end;
+  position: relative;
+  bottom: 2.5rem;
+  right: 2rem;
+}
+
+#about {
+  position: absolute;
+  top: 12rem;
+  align-self: center;
+  width: 22rem;
+  padding: 1rem;
+  color: black;
+  background-color: #ddd;
+  box-shadow: 5px 5px 0px #00db2f;
+  line-height: 1.5rem;
+  font-size: 1.4rem;
+
+}
+
+.modernize #about {
+  box-shadow: 5px 5px 0px rgba(0, 219, 47, 0.7);
+
+}
+
+.modernize, .modernize div, .modernize #editor, .modernize #preview {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.modernize header, .modernize header div, .modernize p, .modernize a {
+  border: none;
+  background-color: unset;
+}
+
+.modernize header {
+  background-color: #db4300;
+  margin: 0;
+}
+
+.modernize #message p {
+  width: 100%;
+  border-radius: 7px;
+  background: #db4300;
+  box-shadow: inset 5px 5px 9px #ba3900,
+              inset -5px -5px 9px #fc4d00;
+}
+
+.modernize header a, .modernize header p {
+  width: 10rem;
+  border-radius: 7px;
+  background: #db4300;
+  box-shadow:  5px 5px 9px #ba3900,
+              -5px -5px 9px #fc4d00;
+}
+
+.modernize .App, .modernize :hover {
+  cursor: auto;
+}
+
+.modernize header p:hover, .modernize header a:hover {
+  cursor: default;
+}
+
+.modernize #header-title {
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #303030;
+}
+
+
+/******************************************
+                MEDIA QUERIES
+*******************************************/
+@media (max-width: 1080px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 970px) {
+  .lg-screens {
+    display: none;
+  }
+
+  header {
+    grid-template-columns: 10rem 1fr 1fr 1fr;
+  }
+
+  #menu-editor {
+    order: 1;
+  }
+
+  #menu-preview {
+    order: 4;
+  }
+
+  #menu-copy {
+    order: 2;
+  }
+
+  #menu-download {
+    order: 5;
+  }
+
+  #menu-theme {
+    order: 3;
+  }
+
+  #menu-github {
+    order: 6;
+  }
+
+  #menu-about {
+    order: 7;
+  }
+
+  #message {
+    grid-area:3/1/4/4;
+  }
+}
+
+@media (max-width: 630px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  header {
+    grid-template-columns: 10rem 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  #message {
+    grid-area:4/1/5/4;
+  }
+
+  #menu-editor {
+    order: 1;
+  }
+
+  #menu-preview {
+    order: 2;
+  }
+
+  #menu-copy {
+    order: 3;
+  }
+
+  #menu-download {
+    order: 4;
+  }
+
+  #menu-theme {
+    order: 5;
+  }
+
+  #menu-github {
+    order: 6;
+  }
+
+  #menu-about {
+    order: 7;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 10px;
+  }
+}
