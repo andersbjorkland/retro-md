@@ -12,7 +12,7 @@ class Intro extends React.Component {
                 <h2>Markdown Live Editor</h2>
                 <p>for React Redux</p>
                 <p>by Anders Björkland</p>
-                <p>(c) 2020 <a href="https://anders.femtearenan.se">anders.femtearenan.se</a></p>
+                <p>(c) 2021 <a href="https://andersbjorkland.online">andersbjorkland.online</a></p>
             </div>
         );
     }
