@@ -2,7 +2,7 @@ import { UPDATE, INITIAL_CLICK } from '../actionTypes';
 import { updateMd } from '../actions';
 
 const placeholder = 
-`# Welcome to my React Markdown Previewer!
+`# Welcome to the retro Markdown Live Editor (MDLE)!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
