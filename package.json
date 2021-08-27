@@ -1,6 +1,6 @@
 {
   "name": "md-preview",
-  "version": "1.2",
+  "version": "1.2.1",
   "private": true,
   "homepage": "https://mdle.andersbjorkland.online",
   "dependencies": {

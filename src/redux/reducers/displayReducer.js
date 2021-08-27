@@ -1,7 +1,7 @@
 import { SPLIT_HEIGHT, FULLSCREEN, SPLIT_VERTICAL, DISMISS, COPY, DOWNLOAD, THEME_SWITCH, ABOUT_SWITCH, SHOW_EDITOR, SHOW_PREVIEW } from '../actionTypes';
 import { dismiss } from '../actions';
 
-const VERSION = "Version 1.2";
+const VERSION = "Version 1.2.1";
 
 const initialState = {
     applyTheme: "Modernize",
