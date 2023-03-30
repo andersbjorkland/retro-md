@@ -2,7 +2,7 @@
   "name": "md-preview",
   "version": "1.2.1",
   "private": true,
-  "homepage": "https://mdle.andersbjorkland.online",
+  "homepage": "https://retro-markdown.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

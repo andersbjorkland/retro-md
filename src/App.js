@@ -148,7 +148,7 @@ class App extends Component {
         <div id="about" className={this.props.displayReducer.about}>
           <h2>About MDLE</h2>
           <p>MDLE (Markdown Live Editor) is a retro-inspired markdown editor/previewer. A source of inspiration has been AMOS for Amiga. It was an editor for writing a BASIC derivate on (most commonly) the Amiga 500.</p>
-          <p>The creator of MDLE is me, Anders Björkland. You can read more about me and my projects over at <a href="https://andersbjorkland.online" target="_blank" rel="noopener noreferrer">andersbjorkland.online</a> or <a href="https://twitter.com/abjorkland" target="_blank" rel="noopener noreferrer">follow me on Twitter</a>.</p>
+          <p>The creator of MDLE is me, Anders Björkland. You can read more about me and my projects over at <a href="https://abjork.land" target="_blank" rel="noopener noreferrer">abjork.land</a> or <a href="https://twitter.com/abjorkland" target="_blank" rel="noopener noreferrer">follow me on Twitter</a>.</p>
         </div>
         <div id="display-wrapper" className={this.props.displayReducer.wrapper}>
           <section id="editor-section" className={this.props.displayReducer.display + " " + this.props.displayReducer.editor} onClick={this.toggleDisplay}>
